@@ -1,8 +1,5 @@
 # Copyright (c) 2025 Y. Torabi et al.
-# Cite as: Y. Torabi et al., "A New Non-Negative Matrix Factorization Approach
-# for Blind Source Separation of Cardiovascular and Respiratory Sound Based
-# on the Periodicity of Heart and Lung Function," arXiv preprint,
-# arXiv:2305.01889, 2023.
+# Cite as: https://doi.org/10.48550/arXiv.2305.01889
 
 # main.py
 # This script orchestrates the data loading, processing, and separation using NMF.
