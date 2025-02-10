@@ -7,6 +7,7 @@ from data_loader import load_audio_data
 from nmf_separation import perform_nmf
 from alpha_nmf import perform_alpha_nmf
 from pl_nmf import perform_pl_nmf
+from lingo_nmf import nmf_with_f0_penalty
 from plot_results import plot_separation_results
 
 # Load data
@@ -31,17 +32,22 @@ Y = 5 * np.dot(A, X) + 6
 options = {'J': 2, 'niter': 1000}
 alpha_options = {'J': 2, 'niter': 1000, 'init': 'random', 'alpha_H': 0.00001}
 pl_nmf_options = {'ranks': [1024, 256, 128, 64, 32, 16, 8, 4, 2, 1], 'alpha': 2}
+lingo_nmf_options = {'J': 2, 'niter': 1000}
 
-# Perform Regular NMF and evaluate separation quality
+# Perform Regular NMF
 H, XH = perform_nmf(Y, options, X, fs1)
 
-# Perform Alpha NMF and evaluate separation quality
+# Perform Alpha NMF
 H_alpha, XH_alpha = perform_alpha_nmf(Y, alpha_options, X, fs1)
 
-# Perform PL-NMF (Multilayer Alpha NMF) and evaluate separation quality
+# Perform PL-NMF (Multilayer Alpha NMF)
 H_pl, XH_pl = perform_pl_nmf(Y, pl_nmf_options, X, fs1)
+
+# Perform LingoNMF (NMF with F0 Penalty)
+H_lingo, XH_lingo, f0_penalty = nmf_with_f0_penalty(Y, lingo_nmf_options, X, fs1)
 
 # Plot results
 plot_separation_results(Y, XH, X)
 plot_separation_results(Y, XH_alpha, X)
 plot_separation_results(Y, XH_pl, X)
+plot_separation_results(Y, XH_lingo, X)
