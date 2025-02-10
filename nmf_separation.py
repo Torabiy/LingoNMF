@@ -1,3 +1,6 @@
+# Copyright (c) 2025 Y. Torabi et al.
+# Cite as: https://doi.org/10.48550/arXiv.2305.01889
+
 # nmf_separation.py
 # This module performs NMF and evaluates separation quality.
 
