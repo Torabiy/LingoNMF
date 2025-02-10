@@ -1,3 +1,6 @@
+# Copyright (c) 2025 Y. Torabi et al.
+# Cite as: https://doi.org/10.48550/arXiv.2305.01889
+
 # alpha_nmf.py
 # This module performs Alpha-NMF with regularization on the H matrix.
 
