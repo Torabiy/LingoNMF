@@ -7,6 +7,7 @@
 import numpy as np
 from data_loader import load_audio_data
 from nmf_separation import perform_nmf
+from alpha_nmf import perform_alpha_nmf
 from plot_results import plot_separation_results
 
 # Load data
@@ -29,9 +30,14 @@ Y = 5 * np.dot(A, X) + 6
 
 # NMF options
 options = {'J': 2, 'niter': 1000}
+alpha_options = {'J': 2, 'niter': 1000, 'init': 'random', 'alpha_H': 0.00001}
 
-# Perform NMF and evaluate separation quality
+# Perform Regular NMF and evaluate separation quality
 H, XH = perform_nmf(Y, options, X, fs1)
+
+# Perform Alpha NMF and evaluate separation quality
+H_alpha, XH_alpha = perform_alpha_nmf(Y, alpha_options, X, fs1)
 
 # Plot results
 plot_separation_results(Y, XH, X)
+plot_separation_results(Y, XH_alpha, X)
