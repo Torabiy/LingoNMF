@@ -13,14 +13,12 @@ def perform_nmf(Y, options, X, fs):
     model = NMF(n_components=options['J'], init='random', max_iter=options['niter'])
     W = model.fit_transform(Y.T)
     H = model.components_
-    
-    # Reconstruct the signals from the components
-    reconstructed_signals = np.dot(W, H)
+
     
     # Evaluate separation performance
-    sdr, sir, sar, _ = mir_eval.separation.bss_eval_sources(X, reconstructed_signals)
+    sdr, sir, sar, _ = mir_eval.separation.bss_eval_sources(X, W.T)
     print("SIR:", sir)
     print("SDR:", sdr)
     print("SAR:", sar)
     
-    return H, reconstructed_signals
+    return W, H
