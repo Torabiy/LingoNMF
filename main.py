@@ -1,13 +1,12 @@
+# main.py
 # Copyright (c) 2025 Y. Torabi et al.
 # Cite as: https://doi.org/10.48550/arXiv.2305.01889
-
-# main.py
-# This script orchestrates the data loading, processing, and separation using NMF.
 
 import numpy as np
 from data_loader import load_audio_data
 from nmf_separation import perform_nmf
 from alpha_nmf import perform_alpha_nmf
+from pl_nmf import perform_pl_nmf
 from plot_results import plot_separation_results
 
 # Load data
@@ -31,6 +30,7 @@ Y = 5 * np.dot(A, X) + 6
 # NMF options
 options = {'J': 2, 'niter': 1000}
 alpha_options = {'J': 2, 'niter': 1000, 'init': 'random', 'alpha_H': 0.00001}
+pl_nmf_options = {'ranks': [1024, 256, 128, 64, 32, 16, 8, 4, 2, 1], 'alpha': 2}
 
 # Perform Regular NMF and evaluate separation quality
 H, XH = perform_nmf(Y, options, X, fs1)
@@ -38,6 +38,10 @@ H, XH = perform_nmf(Y, options, X, fs1)
 # Perform Alpha NMF and evaluate separation quality
 H_alpha, XH_alpha = perform_alpha_nmf(Y, alpha_options, X, fs1)
 
+# Perform PL-NMF (Multilayer Alpha NMF) and evaluate separation quality
+H_pl, XH_pl = perform_pl_nmf(Y, pl_nmf_options, X, fs1)
+
 # Plot results
 plot_separation_results(Y, XH, X)
 plot_separation_results(Y, XH_alpha, X)
+plot_separation_results(Y, XH_pl, X)
