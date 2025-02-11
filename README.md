@@ -13,7 +13,8 @@
    ```
    python main.py
    ```
-
+3. **Run the LingoNMF Jupyter Notebook**  
+   You can also open Jupyter Notebook and run `LingoNMF.ipynb` to execute the code.
 
 
 ## Citation:
