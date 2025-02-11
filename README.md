@@ -6,20 +6,21 @@
 
 ## How to Run the Code
 
+**Run the LingoNMF Jupyter Notebook**  
+   Open Jupyter Notebook and run `LingoNMF.ipynb` to execute the code.
+
+Or:
+
 1. **Install Dependencies**  
    Install the required Python packages using:  
    ```
    pip install -r requirements.txt
    ```
-
 2. **Run the Main Python Script**  
    Execute the main script using:  
    ```
    python main.py
    ```
-3. **Run the LingoNMF Jupyter Notebook**  
-   You can also open Jupyter Notebook and run `LingoNMF.ipynb` to execute the code.
-
 
 ## Citation:
 If you use this code in your research, please cite:
