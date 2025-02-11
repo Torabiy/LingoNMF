@@ -1,5 +1,18 @@
 # LingoNMF
 
+## How to Run the Code
+
+1. **Install Dependencies**  
+   Install the required Python packages using:  
+   ```
+   pip install -r requirements.txt
+   ```
+
+2. **Run the Main Python Script**  
+   Execute the main script using:  
+   ```
+   python main.py
+   ```
 
 
 
