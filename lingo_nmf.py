@@ -1,3 +1,11 @@
+"""
+Copyright © 2025 Yasaman Torabi, Shahram Shirani, James P. Reilly
+
+Cite this work as:
+Torabi, Yasaman; Shirani, Shahram; Reilly, James P. (2025), 
+Large Language Model-based Nonnegative Matrix Factorization For Cardiorespiratory Sound Separation, 
+arXiv preprint, https://doi.org/10.48550/arXiv.2502.05757.
+"""
 import numpy as np
 from scipy.signal import periodogram
 
