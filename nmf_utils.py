@@ -6,7 +6,7 @@ def plot_results(Y, XH, X):
     Plots the mixed, recovered, and original signals.
     """
     titles = ['Mix 1', 'Mix 2', 'Recovered Source 1', 'Recovered Source 2', 'Original Heart', 'Original Lung', 'Normalized Source 1', 'Normalized Source 2']
-    data = [Y[0, :], Y[1, :], XH[0, :], XH[1, :], X[1, :], X[0, :], XH[0, :], XH[1, :]]
+    data = [Y[0, :], Y[1, :], XH[0, :], XH[1, :], X[0, :], X[1, :], XH[0, :], XH[1, :]]
 
     plt.figure(figsize=(12, 8))
     for i in range(8):
