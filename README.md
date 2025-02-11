@@ -1,4 +1,5 @@
 # LingoNMF
+*Non-negative Matrix Factorization (NMF) Enhanced by Large Language Models (LLMs)  For Cardiorespiratory Sound Separation*
 
 ## How to Run the Code
 
