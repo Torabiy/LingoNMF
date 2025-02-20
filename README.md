@@ -8,6 +8,7 @@
 
 **Run the LingoNMF Jupyter Notebook**  
    Open Jupyter Notebook and run `LingoNMF.ipynb` to execute the code.
+   Open Jupyter Notebook and run `LLama.ipynb` to execute the LLM prompts (GPU needed).
 
 Or:
 
@@ -21,6 +22,9 @@ Or:
    ```
    python main.py
    ```
+3. **Run the MATLAB implementation**
+   
+   Execute `PL_NMF.m` for NMF implementation in MATLAB  
 
 ## Citation:
 If you use this code in your research, please cite:
