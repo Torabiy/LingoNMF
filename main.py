@@ -1,5 +1,5 @@
 """
-Copyright © 2025 Yasaman Torabi, Shahram Shirani, James P. Reilly
+Copyright © 2025 Yasaman Torabi
 
 Cite this work as:
 Torabi, Yasaman; Shirani, Shahram; Reilly, James P. (2025), 
